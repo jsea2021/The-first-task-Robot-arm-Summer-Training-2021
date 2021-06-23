@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Control Interface</title>
+
+<style>
+.slider {
+  width: 20%;
+  height: 20%;
+}
+h3{
+color: #548ca4;	
+}
+span{
+	color: #548ca4;
+}
+body{
+background-image:url('arm3.jpeg'); 
+background-repeat: no-repeat;
+background-size: 1000px 900px;
+background-color: #548ca4; 
+text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+<!-- SUB_TASK 1-->
+<form  action="engines.php" method="POST">
+	<!-- the engine1 -->
+<h3>engine1</h3>
+ <p> <input type="range" name="engine1" min="1" max="180" value="1" class="slider" id="myRange1">
+ Value: <span id="demo1"></span></p>
+
+<!-- the 2 engine2-->
+ <h3>engine2</h3>
+  <p> <input type="range" name="engine2"  min="1" max="180" value="1" class="slider" id="myRange2">
+  Value:<span id="demo2"></span></p>
+
+<!-- the engine3 -->
+ <h3>engine3</h3>
+ <p> <input type="range"  name="engine3"  min="1" max="180" value="1" class="slider" id="myRange3">
+ Value:<span id="demo3"></span></p>
+
+<!-- the engine4 -->
+ <h3>engine4</h3>
+ <p> <input type="range"  name="engine4"  min="1" max="180" value="1" class="slider" id="myRange4">
+ Value:<span id="demo4"></span> </p>
+
+<!-- the engine5-->
+ <h3>engine5</h3>
+ <p> <input type="range"   name="engine5" min="1" max="180" value="1" class="slider" id="myRange5">
+ Value:<span id="demo5"></span></p>
+
+ <!-- the engine6-->
+ <h3>engine6</h3>
+ <p> <input type="range"  name="engine6" min="1" max="180" value="1" class="slider" id="myRange6">
+ Value:<span id="demo6"></span></p>
+  
+ <!--Button-->
+ 
+<button type="submit" value="Save" name="save">save </button> 
+<button type="submit" value="ON" name="on"    >  on </button> 
+<button type="submit"  value="OFF" name="off" > off </button> 
+</form>
+
+<!-- SCRIPT -->
+<script>
+var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value;// the 1 en
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+}
+
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+
+output2.innerHTML = slider2.value;//the 2 en
+slider2.oninput = function() {
+  output2.innerHTML = this.value;
+
+}
+var slider3= document.getElementById("myRange3");
+var output3 = document.getElementById("demo3");
+
+output3.innerHTML = slider3.value;//the 3 en
+slider3.oninput = function() {
+  output3.innerHTML = this.value;
+
+}
+
+var slider4 = document.getElementById("myRange4");
+var output4 = document.getElementById("demo4");
+
+output4.innerHTML = slider4.value;//the 4 en
+slider4.oninput = function() {
+  output4.innerHTML = this.value;
+
+}
+var slider5 = document.getElementById("myRange5");
+var output5 = document.getElementById("demo5");
+
+output5.innerHTML = slider5.value;//the 5 en
+slider5.oninput = function() {
+  output5.innerHTML = this.value;
+
+}
+
+var slider6 = document.getElementById("myRange6");
+var output6 = document.getElementById("demo6");
+
+output6.innerHTML = slider6.value;//the 6 en
+slider6.oninput = function() {
+  output6.innerHTML = this.value;
+
+}
+</script>
+
+
+</body>
+</html>
